@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vicalvez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 19:22:16 by vicalvez          #+#    #+#             */
-/*   Updated: 2023/11/06 19:32:43 by vicalvez         ###   ########.fr       */
+/*   Updated: 2023/11/15 14:10:48 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*ft_strrchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == c % 256)
 			result = (char *)(s + i);
 		i++;
 	}
-	if (c == 0)
+	if (c % 256 == 0)
 		result = (char *)(s + i);
 	return (result);
 }

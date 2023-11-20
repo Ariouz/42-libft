@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vicalvez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:21:44 by vicalvez          #+#    #+#             */
-/*   Updated: 2023/11/06 16:21:05 by vicalvez         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:19:00 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!dest || !src)
+	if (!src && !dest && n > 0)
 		return (NULL);
 	if (dest > src)
 		ft_memmove(dest, src, n);

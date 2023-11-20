@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vicalvez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 00:03:26 by vicalvez          #+#    #+#             */
-/*   Updated: 2023/11/08 11:58:23 by vicalvez         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:18:26 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,17 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*itoa;
+	long	nb;
 
-	itoa = ft_itoa(n);
-	ft_putstr_fd(itoa, fd);
-	free(itoa);
+	nb = n;
+	if (nb < 0)
+	{
+		nb = -nb;
+		ft_putchar_fd('-', fd);
+	}
+	if (nb > 9)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+	}
+	ft_putchar_fd(nb % 10 + '0', fd);
 }

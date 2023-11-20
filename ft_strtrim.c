@@ -3,18 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vicalvez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:05:26 by vicalvez          #+#    #+#             */
-/*   Updated: 2023/11/07 23:41:34 by vicalvez         ###   ########.fr       */
+/*   Updated: 2023/11/15 18:03:16 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
+
+static int	ft_get_trim_size(char *result, int len, const char *set)
+{
+	while (result[len - 1] && ft_strchr(set, result[len - 1]) != NULL)
+	{
+		result[len - 1] = 0;
+		len--;
+	}
+	return (len);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*result;
+	char	*f_res;
 	int		i;
 	int		len;
 
@@ -27,10 +40,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	len -= i;
 	result = ft_substr(s1, i, len);
-	while (result[len - 2] && ft_strchr(set, result[len - 2]) != NULL)
-	{
-		result[len - 2] = 0;
-		len--;
-	}
-	return (result);
+	if (!result)
+		return (NULL);
+	f_res = ft_substr(result, 0, ft_get_trim_size(result, len, set));
+	free(result);
+	return (f_res);
 }

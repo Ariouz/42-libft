@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vicalvez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:17:59 by vicalvez          #+#    #+#             */
-/*   Updated: 2023/11/14 23:41:52 by vicalvez         ###   ########.fr       */
+/*   Updated: 2023/11/15 13:23:44 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
@@ -21,11 +22,11 @@ typedef struct s_list
 	struct s_list		*next;
 }	t_list;
 
-int				ft_isalpha(unsigned char c);
-int				ft_isdigit(unsigned char c);
-int				ft_isalnum(unsigned char c);
-int				ft_isascii(unsigned char c);
-int				ft_isprint(unsigned char c);
+int				ft_isalpha(int c);
+int				ft_isdigit(int c);
+int				ft_isalnum(int c);
+int				ft_isascii(int c);
+int				ft_isprint(int c);
 int				ft_strlen(char *s);
 int				ft_toupper(int c);
 int				ft_tolower(int c);

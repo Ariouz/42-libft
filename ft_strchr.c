@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vicalvez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:54:25 by vicalvez          #+#    #+#             */
-/*   Updated: 2023/11/06 19:21:43 by vicalvez         ###   ########.fr       */
+/*   Updated: 2023/11/15 14:09:25 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -18,19 +20,28 @@ char	*ft_strchr(const char *s, int c)
 	char	*result;
 
 	i = 0;
+	result = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == c % 256)
 		{
 			result = (char *)(s + i);
-			return (result);
+			break ;
 		}
 		i++;
 	}
-	if (c == 0)
+	if (c % 256 == 0)
 	{
 		result = (char *)(s + i);
-		return (result);
 	}
-	return (NULL);
+	return (result);
 }
+/*
+int main(void)
+{
+	char *s = "tripouille";
+	printf("%i\n", 't' + 256);
+	printf("%s\n", strchr(s, 't' + 256));
+	printf("%s\n", ft_strchr(s, 't' + 256));
+	return (0);
+}*/
