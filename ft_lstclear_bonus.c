@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vicalvez <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 13:47:07 by vicalvez          #+#    #+#             */
-/*   Updated: 2023/11/08 14:31:12 by vicalvez         ###   ########.fr       */
+/*   Created: 2023/11/22 13:17:28 by vicalvez          #+#    #+#             */
+/*   Updated: 2023/11/22 13:18:21 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(*lst, del);
 		*lst = next;
 	}
+	*lst = NULL;
 }

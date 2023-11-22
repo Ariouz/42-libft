@@ -6,13 +6,13 @@
 /*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 18:54:25 by vicalvez          #+#    #+#             */
-/*   Updated: 2023/11/15 14:09:25 by vicalvez         ###   ########.fr       */
+/*   Updated: 2023/11/22 13:11:33 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+/*#include <stdio.h>
+#include <string.h>*/
 
 char	*ft_strchr(const char *s, int c)
 {

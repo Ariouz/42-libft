@@ -6,11 +6,12 @@
 /*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:58:55 by vicalvez          #+#    #+#             */
-/*   Updated: 2023/11/15 16:18:45 by vicalvez         ###   ########.fr       */
+/*   Updated: 2023/11/22 13:10:41 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -36,3 +37,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/*int main(void){
+	char dest[15];
+	char *src = "Salut";
+	printf("%p\n", ft_memmove(dest, src, 5));
+}*/
