@@ -6,7 +6,7 @@
 /*   By: vicalvez <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:52:36 by vicalvez          #+#    #+#             */
-/*   Updated: 2023/11/06 16:52:37 by vicalvez         ###   ########.fr       */
+/*   Updated: 2023/11/29 10:25:07 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < ft_strlen(s))

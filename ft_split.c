@@ -6,7 +6,7 @@
 /*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:26:35 by vicalvez          #+#    #+#             */
-/*   Updated: 2023/11/22 13:14:25 by vicalvez         ###   ########.fr       */
+/*   Updated: 2023/11/29 10:38:26 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,7 @@ static char	*ft_get_word(const char *s, char c)
 	word = ft_substr((char *)s, 0, word_len);
 	if (!word)
 	{
-		word = malloc(1);
-		word[0] = '\0';
+		return (NULL);
 	}
 	else
 		word[word_len] = 0;

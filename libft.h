@@ -6,7 +6,7 @@
 /*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:17:59 by vicalvez          #+#    #+#             */
-/*   Updated: 2023/11/22 13:06:46 by vicalvez         ###   ########.fr       */
+/*   Updated: 2023/11/29 10:24:15 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isascii(int c);
 int				ft_isprint(int c);
-int				ft_strlen(char *s);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -44,6 +43,7 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+size_t			ft_strlen(const char *s);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 void			*ft_memset(void *s, int c, size_t n);
