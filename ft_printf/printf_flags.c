@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*   printf_flags.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vicalvez <vicalvez@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 14:33:49 by vicalvez          #+#    #+#             */
-/*   Updated: 2024/01/15 12:30:05 by vicalvez         ###   ########.fr       */
+/*   Created: 2023/11/14 13:07:13 by vicalvez          #+#    #+#             */
+/*   Updated: 2024/01/14 17:17:57 by vicalvez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+int	ft_absolute(int i)
 {
-	t_list	*next;
+	return (-i);
+}
 
-	if (!lst || !f)
-		return ;
-	next = lst->next;
-	f(lst->content);
-	while (next != NULL)
+int	fill_fmw(int len, int fmw, char *flags)
+{
+	int		i;
+	char	c;
+
+	i = fmw;
+	c = ' ';
+	if (flags[0] == '0')
+		c = '0';
+	while (fmw > len)
 	{
-		f(next->content);
-		next = next->next;
+		ft_putchar_fd(c, 1);
+		fmw--;
 	}
+	return (ft_absolute(fmw - i));
 }
